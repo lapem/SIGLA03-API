@@ -27,4 +27,6 @@ A continuación, se describen los principales métodos del API de SIGLA03 para r
 	7. [Agregar Cliente](https://github.com/lapem/SIGLA03-API/blob/master/Registra%20cliente.md).
 	Adicionalmente es posible agregar un cliente nuevo a la lista de clientes de la empresa. Esto es muy útil si ya tenemos todo listo para la transferencia, pero se trata de un cliente nuevo el cual tal vez no tenga un alias.
 
+Para facilitar las pruebas de desarrollo, se comparte colección creada con postman: https://github.com/lapem/SIGLA03-API/blob/master/SIGLA03%20Desarrollo%20API.postman_collection.json
+
 Para mayor información, por favor póngase en contacto con la Oficina de Ingeniería de Software del LAPEM [carlos.solis@cfe.mx](mailto:carlos.solis@cfe.mx)
