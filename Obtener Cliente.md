@@ -27,7 +27,7 @@
 
   ````
   { 
-    'AliasCliente': "Texto a buscar"
+    'AliasCliente': "condumex"
   }
   ````
   
