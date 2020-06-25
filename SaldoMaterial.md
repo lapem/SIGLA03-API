@@ -25,7 +25,7 @@ Authorization: Bearer 1CIPn1wHHhhyas.....
 * **Data Params** (body)
 Debe indicarse un criterio de búsqueda para devolver una lista de materiales disponibles.
 ````
-{ "Descripcion": 764683 }
+{ "Descripcion": "poste" }
 ````
 
 * **Success Response:**
