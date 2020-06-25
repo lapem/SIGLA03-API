@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "1264121b-b91c-444e-922b-1479b5a469db",
+		"name": "SIGLA03 Desarrollo API",
+		"description": "Coleccion para realizar pruebas de conexión con el API de desarrollo de SIGLA03",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authenticación",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "CFEFPC",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "casolism",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://lapem.cfe.gob.mx/develSIGLA03API/token",
+					"protocol": "https",
+					"host": [
+						"lapem",
+						"cfe",
+						"gob",
+						"mx"
+					],
+					"path": [
+						"develSIGLA03API",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda de material en el inventario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5D3jc02lPypXD_WaXeA8Qb4GDdd0sq3u_OORdTuIWZer1la2JFfvWXSZKgXgsTAOeXzuWxiJjdDan0oR7714fNVip9uo06NPAQ096mvvSo7WNcdaa75Ig39mGq4CaQ2m0qlIXYV8zYskui2vgftHSgNBMpfEKwdm2R1MjRVCSHT9miERRAojAskIb_iJv6o_0hv0LYXEtq_rhoNxe1Q30Ix7gERgg7d5Q2-vffIJPs9dtB6gHl_Ypd-3_xF7o6RtrfmFJfcQ2NIPsXcI5fMVdXyBPauZpKqZ--6wdE5S475hXIjGcPX94-WiTj4N6oxQORz-PPXALRyDmUFw71MrXORlPjkYc5m5L2GPgowAFCZgAOvLaK2CDlMhQMq8PUevYeoXk-eKOSI4fKSH40dTamlqEY4GZVPVi_rosfYrASJrfqdoLJMtYZgdMp6ihhuwW_7OxLnQARDFM57sgbtoyoxMxqPEm3eWH6nHJieQVwvTDvQFdSWMQxR1Xi42qjzn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"Descripcion\": \"poste\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lapem.cfe.gob.mx/develSIGLA03API/api/saldomaterial/ajax/1",
+					"protocol": "https",
+					"host": [
+						"lapem",
+						"cfe",
+						"gob",
+						"mx"
+					],
+					"path": [
+						"develSIGLA03API",
+						"api",
+						"saldomaterial",
+						"ajax",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta de numeros de serie por aviso de prueba",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5D3jc02lPypXD_WaXeA8Qb4GDdd0sq3u_OORdTuIWZer1la2JFfvWXSZKgXgsTAOeXzuWxiJjdDan0oR7714fNVip9uo06NPAQ096mvvSo7WNcdaa75Ig39mGq4CaQ2m0qlIXYV8zYskui2vgftHSgNBMpfEKwdm2R1MjRVCSHT9miERRAojAskIb_iJv6o_0hv0LYXEtq_rhoNxe1Q30Ix7gERgg7d5Q2-vffIJPs9dtB6gHl_Ypd-3_xF7o6RtrfmFJfcQ2NIPsXcI5fMVdXyBPauZpKqZ--6wdE5S475hXIjGcPX94-WiTj4N6oxQORz-PPXALRyDmUFw71MrXORlPjkYc5m5L2GPgowAFCZgAOvLaK2CDlMhQMq8PUevYeoXk-eKOSI4fKSH40dTamlqEY4GZVPVi_rosfYrASJrfqdoLJMtYZgdMp6ihhuwW_7OxLnQARDFM57sgbtoyoxMxqPEm3eWH6nHJieQVwvTDvQFdSWMQxR1Xi42qjzn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://lapem.cfe.gob.mx/develSIGLA03API/api/numeroserie/ap/436575/cve/0",
+					"protocol": "https",
+					"host": [
+						"lapem",
+						"cfe",
+						"gob",
+						"mx"
+					],
+					"path": [
+						"develSIGLA03API",
+						"api",
+						"numeroserie",
+						"ap",
+						"436575",
+						"cve",
+						"0"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta cartera de clientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5D3jc02lPypXD_WaXeA8Qb4GDdd0sq3u_OORdTuIWZer1la2JFfvWXSZKgXgsTAOeXzuWxiJjdDan0oR7714fNVip9uo06NPAQ096mvvSo7WNcdaa75Ig39mGq4CaQ2m0qlIXYV8zYskui2vgftHSgNBMpfEKwdm2R1MjRVCSHT9miERRAojAskIb_iJv6o_0hv0LYXEtq_rhoNxe1Q30Ix7gERgg7d5Q2-vffIJPs9dtB6gHl_Ypd-3_xF7o6RtrfmFJfcQ2NIPsXcI5fMVdXyBPauZpKqZ--6wdE5S475hXIjGcPX94-WiTj4N6oxQORz-PPXALRyDmUFw71MrXORlPjkYc5m5L2GPgowAFCZgAOvLaK2CDlMhQMq8PUevYeoXk-eKOSI4fKSH40dTamlqEY4GZVPVi_rosfYrASJrfqdoLJMtYZgdMp6ihhuwW_7OxLnQARDFM57sgbtoyoxMxqPEm3eWH6nHJieQVwvTDvQFdSWMQxR1Xi42qjzn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"AliasCliente\": \"condumex\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lapem.cfe.gob.mx/develSIGLA03API/api/cliente/criterio/ajax",
+					"protocol": "https",
+					"host": [
+						"lapem",
+						"cfe",
+						"gob",
+						"mx"
+					],
+					"path": [
+						"develSIGLA03API",
+						"api",
+						"cliente",
+						"criterio",
+						"ajax"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
