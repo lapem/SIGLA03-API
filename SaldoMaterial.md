@@ -60,10 +60,10 @@ Debe indicarse un criterio de búsqueda para devolver una lista de materiales di
 
   ```javascript
     $.ajax({
-      url: "baseUrl/saldomaterial/ajax/0",
+      url: "baseUrl/saldomaterial/ajax/1",
       dataType: "json",
-      data: { "Descripcion": 764683 },
-      type : "GET",
+      data: { "Descripcion": "poste" },
+      type : "POST",
       success : function(r) {
         console.log(r);
       }
