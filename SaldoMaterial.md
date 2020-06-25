@@ -5,17 +5,15 @@
 
 * **URL**
 
-  *baseUrl*/api/saldomaterial/ajax/:id
+  *baseUrl*/api/saldomaterial/ajax/1
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
-   **Required:** Identificador de idEmpresa, que es requerido pero está obsoleto, es decir no tiene efecto sobre el resultado
-
-   `id=[integer]`
+   Ninguno
 
 * **Data Params** (header)
 
